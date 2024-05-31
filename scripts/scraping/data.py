@@ -1,8 +1,8 @@
-from .faculties import (Agriculture, Arts, Economics, Education, Engineering,
-                       Law, Liberal_arts, Medicine, Pharmacy, Science)
 from pydantic import BaseModel
 
-from .interface import Faculty
+from scraping.faculties import (Agriculture, Arts, Economics, Education, Engineering,
+                        Law, Liberal_arts, Medicine, Pharmacy, Science)
+from scraping.interface import Faculty
 
 
 class Urls(dict):
@@ -76,10 +76,10 @@ scraping_mapping = ScraperMapping(
 )
 
 
-def get_scraper(faculty_name: str, url: str) -> Faculty:
+def get_scraper(faculty_name: str, url: str) -> Faculty | None:
     scraper = scraping_mapping.get(faculty_name)
     if not scraper:
         return None
-    
-    # ここでインスタンス化 
+
+    # ここでインスタンス化
     return scraper(faculty_name=faculty_name, url=url)

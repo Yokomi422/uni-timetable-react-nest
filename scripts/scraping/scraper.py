@@ -1,4 +1,4 @@
-from .interface import Faculty
+from scraping.interface import Faculty
 
 
 class Scraper:
@@ -7,9 +7,9 @@ class Scraper:
         url (str): URL of the faculty
         faculty (Faculty): Faculty class, do not forget to instantiate it
     """
+
     def __init__(self, url: str):
         self.url = url
-
 
     def run(self):
         scraper = self.faculty()

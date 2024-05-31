@@ -1,6 +1,6 @@
-from scraping.interface import Faculty
-
 from selenium import webdriver
+
+from scraping.interface import Faculty
 
 driver = webdriver.Chrome()
 
@@ -8,4 +8,3 @@ driver = webdriver.Chrome()
 class Pharmacy(Faculty):
     def execute(self):
         self._scrape(driver)
-

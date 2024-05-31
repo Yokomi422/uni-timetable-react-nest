@@ -9,9 +9,10 @@ def main():
         faculty = get_scraper(faculty_name, url)
         if not faculty:
             raise ValueError("No such a faculty")
-        
+
         faculty.execute()
 
 
 if __name__ == "__main__":
+
     main()

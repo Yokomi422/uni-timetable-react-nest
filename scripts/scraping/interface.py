@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
 
+from pydantic import BaseModel
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
-from pydantic import BaseModel
+
 
 class LectureAttributes(BaseModel):
     name: str | None
@@ -35,7 +36,7 @@ class Faculty(ABC):
     def execute(self):
         pass
 
-    def _scrape(self, driver: WebDriver) -> list[LectureAttributes]:
+    def _scrape(self, driver: WebDriver) -> list[LectureAttributes] | None:
         url = self.url
         page = 1
         lecture_attributes_list: list[LectureAttributes] = []
@@ -61,8 +62,10 @@ class Faculty(ABC):
                 lecture_attributes_list.append(lecture_attributes)
 
                 driver.back()
-                
+
             page += 1
+        
+        return None
 
     def _fetch_attributes(self, driver: WebDriver) -> LectureAttributes:
         try:
