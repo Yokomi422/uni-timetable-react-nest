@@ -3,6 +3,7 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
+  // privateで宣言されたappServiceは自動でfieldになる
   constructor(private readonly appService: AppService) {}
 
   @Get()
