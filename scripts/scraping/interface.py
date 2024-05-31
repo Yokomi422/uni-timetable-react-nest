@@ -64,7 +64,7 @@ class Faculty(ABC):
                 driver.back()
 
             page += 1
-        
+
         return None
 
     def _fetch_attributes(self, driver: WebDriver) -> LectureAttributes:

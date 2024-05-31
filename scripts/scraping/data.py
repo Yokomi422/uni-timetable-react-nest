@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 
-from scraping.faculties import (Agriculture, Arts, Economics, Education, Engineering,
-                        Law, Liberal_arts, Medicine, Pharmacy, Science)
+from scraping.faculties import (Agriculture, Arts, Economics, Education,
+                                Engineering, Law, Liberal_arts, Medicine,
+                                Pharmacy, Science)
 from scraping.interface import Faculty
 
 

@@ -1,18 +1,21 @@
-from .data import get_scraper, get_urls
-from .scraper import Scraper
+"""
+poetry run python -m scraping.scraping
+"""
+
+from scraping.data import get_scraper, get_urls
+from scraping.scraper import Scraper
 
 
 def main():
     urls = get_urls()
     for faculty_name, url in urls.items():
-        # インスタンス化された具体的な学部のクラスを取得
-        faculty = get_scraper(faculty_name, url)
-        if not faculty:
-            raise ValueError("No such a faculty")
+        faculty_instance = get_scraper(faculty_name, url)
+        if not faculty_instance:
+            raise ValueError(f"No scraper found for {faculty_name}")
 
-        faculty.execute()
+        scraper = Scraper(faculty_instance)
+        scraper.run()
 
 
 if __name__ == "__main__":
-
     main()

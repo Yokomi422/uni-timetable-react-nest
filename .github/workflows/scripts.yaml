@@ -1,4 +1,4 @@
-name: scripts 
+name: scripts
 
 on:
   pull_request:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: backend
+        working-directory: scripts
     steps:
       - uses: actions/checkout@v3
       - name: Install poetry
