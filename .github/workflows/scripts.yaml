@@ -1,0 +1,36 @@
+name: scripts
+
+on:
+  pull_request:
+    paths:
+      - "scripts/**.py"
+  push:
+    branches:
+      - main
+
+jobs:
+  backend_test:
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: scripts
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install poetry
+        run: pipx install poetry
+      - name: Setup python version ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: poetry
+      - name: Install project
+        run: poetry install
+      - name: format
+        run: make fmt
+      - uses: AustinScola/mypy-cache-github-action@v1
+        name: Cache mypy cache
+      - name: lint
+        run: make lint
