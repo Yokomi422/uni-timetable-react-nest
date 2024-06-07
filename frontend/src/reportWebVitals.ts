@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { ReportHandler } from "web-vitals";
+/* eslint-disable no-unused-vars */
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
