@@ -4,7 +4,7 @@ import { FaRegClock, FaSearch, FaUser } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 py-4 mt-8 w-full">
+    <footer className="bg-gray-200 py-4 w-full fixed bottom-0">
       <div className="max-w-5xl mx-auto text-center">
         <nav className="flex justify-center space-x-12">
           <Link
