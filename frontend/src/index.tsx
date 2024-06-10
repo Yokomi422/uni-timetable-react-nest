@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import App from "./App";
-import NotFound from "./components/404";
-import Signup from "./components/Signup";
-import Signin from "./components/Signin";
-import Profile from "./components/Profile";
-import Register from "./components/Register";
+import NotFound from "./pages/404";
+import Signup from "./pages/Signup";
+import Signin from "./pages/Signin";
+import Profile from "./pages/Profile";
+import Register from "./pages/Register";
 
 import reportWebVitals from "./reportWebVitals";
 

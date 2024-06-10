@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/Footer";
 
 /**
  *
@@ -6,7 +7,7 @@ import React from "react";
  */
 export default function Profile() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-3xl mx-auto px-4 py-8 bg-white rounded-lg shadow-md">
         <h1 className="mb-8 text-center text-4xl font-bold">プロフィール</h1>
 
@@ -50,6 +51,7 @@ export default function Profile() {
           <p className="text-lg">総必要単位数: 60 単位</p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
