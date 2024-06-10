@@ -6,6 +6,7 @@ import App from "./App";
 import NotFound from "./components/404";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
+import Profile from "./components/Profile";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -22,6 +23,7 @@ root.render(
         <Route path="/" element={<App />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/signin" element={<Signin />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

@@ -112,6 +112,35 @@ export default function Signup() {
               </p>
             </form>
           </div>
+          <div className="flex items-center justify-between mt-4">
+            <hr className="w-full border-t border-gray-300" />
+            <span className="px-2 text-gray-400">or</span>
+            <hr className="w-full border-t border-gray-300" />
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2 m-6 px-6">
+            <button
+              type="button"
+              className="flex items-center justify-center w-full text-gray-900 bg-white border border-gray-300 rounded-lg py-2.5 px-4 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Google_Logo_2015.png"
+                alt="Google Logo"
+                className="w-5 h-5 mr-2"
+              />
+              Sign up with Google
+            </button>
+            <button
+              type="button"
+              className="flex items-center justify-center w-full text-gray-900 bg-white border border-gray-300 rounded-lg py-2.5 px-4 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                alt="Apple Logo"
+                className="w-5 h-5 mr-2"
+              />
+              Sign up with Apple
+            </button>
+          </div>
         </div>
       </div>
     </section>
