@@ -9,6 +9,7 @@ import Signin from "./pages/Signin";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
+import Timetable from "./pages/Timetable";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -28,6 +29,7 @@ root.render(
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/search" element={<Search />}></Route>
+        <Route path="/timetable" element={<Timetable />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
