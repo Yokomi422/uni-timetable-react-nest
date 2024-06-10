@@ -1,3 +1,7 @@
+/**
+ * 404 Page
+ * @returns 404 Page
+ */
 export default function NotFound() {
   return (
     <div className="w-full h-screen flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 space-x-8 2xl:space-x-0">
