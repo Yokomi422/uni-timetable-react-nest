@@ -1,8 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+
 import App from "./App";
-import NotFound from "./components/404";
+import NotFound from "./pages/404";
+import Signup from "./pages/Signup";
+import Signin from "./pages/Signin";
+import Profile from "./pages/Profile";
+import Register from "./pages/Register";
+import Search from "./pages/Search";
+import Timetable from "./pages/Timetable";
+
 import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -16,6 +24,12 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/signin" element={<Signin />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/search" element={<Search />}></Route>
+        <Route path="/timetable" element={<Timetable />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
