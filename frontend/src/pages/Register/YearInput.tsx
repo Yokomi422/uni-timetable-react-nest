@@ -1,9 +1,17 @@
 import { Select } from "@headlessui/react";
 import { useState, useEffect } from "react";
 
-const yearOptions = [
-  { value: "1", field: "1" },
-  { value: "2", field: "2" },
+type ChildProps = {
+  selectedYear: string;
+  setSelectedYear: React.Dispatch<React.SetStateAction<string>>;
+};
+
+type YearOption = {
+  value: string;
+  field: string;
+};
+
+const yearOptions: YearOption[] = [
   { value: "3", field: "3" },
   { value: "4", field: "4" },
   { value: "5", field: "5" },
@@ -11,16 +19,16 @@ const yearOptions = [
 ];
 
 /**
- *
+ * Year input component
+ * @param props - The props object
+ * @param props.selectedYear - The selected year
+ * @param props.setSelectedYear - The function to set the selected year
  * @returns Year input component
  */
-export default function YearInput() {
-  const [selectedYear, setSelectedYear] = useState("1");
-
-  useEffect(() => {
-    console.log("YearInput component mounted", selectedYear);
-  }, [selectedYear]);
-
+export default function YearInput({
+  selectedYear,
+  setSelectedYear,
+}: ChildProps) {
   return (
     <div className="relative mb-6" data-twe-input-wrapper-init>
       <label
