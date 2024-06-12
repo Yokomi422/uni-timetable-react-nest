@@ -1,4 +1,6 @@
-import React from "react";
+import YearInput from "./YearInput";
+import FacultyInput from "./FacaltyInput";
+import DepartmentInput from "./DepartmentInput";
 
 /**
  * @returns Profile form component
@@ -12,62 +14,13 @@ export default function ProfileForm() {
         </h1>
         <form>
           {/* Year input */}
-          <div className="relative mb-6" data-twe-input-wrapper-init>
-            <label
-              htmlFor="year"
-              className="block mb-2 text-sm font-medium text-neutral-500 dark:text-neutral-300"
-            >
-              Year
-            </label>
-            <input
-              type="number"
-              className="peer block w-full rounded border-2 px-3 py-2 leading-6 outline-none transition-all duration-200 ease-linear focus:border-primary focus:outline-none"
-              id="year"
-              placeholder="Year"
-            />
-          </div>
+          <YearInput />
 
           {/* Faculty input */}
-          <div className="relative mb-6" data-twe-input-wrapper-init>
-            <label
-              htmlFor="faculty"
-              className="block mb-2 text-sm font-medium text-neutral-500 dark:text-neutral-300"
-            >
-              Faculty
-            </label>
-            <select
-              id="faculty"
-              className="peer block w-full rounded border-2 px-3 py-2 leading-6 outline-none transition-all duration-200 ease-linear focus:border-primary focus:outline-none"
-            >
-              <option value="">Select Faculty</option>
-              <option value="engineering">Engineering</option>
-              <option value="science">Science</option>
-              <option value="arts">Arts</option>
-            </select>
-          </div>
+          <FacultyInput />
 
           {/* Department input */}
-          <div className="relative mb-6" data-twe-input-wrapper-init>
-            <label
-              htmlFor="department"
-              className="block mb-2 text-sm font-medium text-neutral-500 dark:text-neutral-300"
-            >
-              Department
-            </label>
-            <select
-              id="department"
-              className="peer block w-full rounded border-2 px-3 py-2 leading-6 outline-none transition-all duration-200 ease-linear focus:border-primary focus:outline-none"
-            >
-              <option value="">Select Department</option>
-              <option value="computer_science">Computer Science</option>
-              <option value="mechanical_engineering">
-                Mechanical Engineering
-              </option>
-              <option value="electrical_engineering">
-                Electrical Engineering
-              </option>
-            </select>
-          </div>
+          <DepartmentInput />
 
           {/* Interests textarea */}
           <div className="relative mb-6" data-twe-input-wrapper-init>
