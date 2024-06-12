@@ -1,7 +1,17 @@
 import { Select } from "@headlessui/react";
 import { useState } from "react";
 
-const facultyOptions = [
+type FacaltyProps = {
+  selectedFaculty: string;
+  setSelectedFaculty: React.Dispatch<React.SetStateAction<string>>;
+};
+
+interface FacultyOption {
+  value: string;
+  field: string;
+}
+
+const facultyOptions: FacultyOption[] = [
   { value: "default", field: "学部を選択してください" },
   { value: "science", field: "理学部" },
   { value: "engineering", field: "工学部" },
@@ -16,12 +26,15 @@ const facultyOptions = [
 ];
 
 /**
- *
+ * @param props - The props object
+ * @param props.selectedFaculty - The selected faculty
+ * @param props.setSelectedFaculty - The function to set the selected faculty
  * @returns Year input component
  */
-export default function FacultyInput() {
-  const [selectedYear, setSelectedYear] = useState("1");
-
+export default function FacultyInput({
+  selectedFaculty,
+  setSelectedFaculty,
+}: FacaltyProps) {
   return (
     <div className="relative mb-6" data-twe-input-wrapper-init>
       <label
@@ -31,8 +44,8 @@ export default function FacultyInput() {
         学科
       </label>
       <Select
-        value={selectedYear}
-        onChange={(event) => setSelectedYear(event.target.value)}
+        value={selectedFaculty}
+        onChange={(event) => setSelectedFaculty(event.target.value)}
         name="year"
         className="peer block w-full rounded border-2 px-3 py-2 leading-6 outline-none transition-all duration-200 ease-linear focus:border-primary focus:outline-none"
         id="year"
