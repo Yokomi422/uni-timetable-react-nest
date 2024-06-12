@@ -17,7 +17,7 @@ export default function Profile() {
             <img
               className="w-40 h-40 rounded-full"
               src="https://picsum.photos/200"
-              alt="Profile picture"
+              alt="Profile"
             />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold">John Doe</h3>

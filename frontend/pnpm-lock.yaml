@@ -62,21 +62,12 @@ importers:
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.57.0)
       eslint-plugin-jsdoc:
         specifier: ^48.2.9
         version: 48.2.9(eslint@8.57.0)
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
-      prettier:
-        specifier: 3.3.1
-        version: 3.3.1
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.4
@@ -1453,12 +1444,14 @@ packages:
     peerDependencies:
       react: ^18
       react-dom: ^18
+
   "@humanwhocodes/config-array@0.11.14":
     resolution:
       {
         integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==,
       }
     engines: { node: ">=10.10.0" }
+    deprecated: Use @eslint/config-array instead
 
   "@humanwhocodes/module-importer@1.0.1":
     resolution:
@@ -1472,6 +1465,7 @@ packages:
       {
         integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==,
       }
+    deprecated: Use @eslint/object-schema instead
 
   "@isaacs/cliui@8.0.2":
     resolution:
@@ -1653,6 +1647,7 @@ packages:
       {
         integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==,
       }
+
   "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
     resolution:
       {
@@ -2389,10 +2384,10 @@ packages:
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
 
-  "@typescript-eslint/types@7.12.0":
+  "@typescript-eslint/types@7.13.0":
     resolution:
       {
-        integrity: sha512-o+0Te6eWp2ppKY3mLCU+YA9pVJxhUJE15FV7kxuD9jgwIAa+w/ycGJBMrYDTpVGUM/tgpa9SeMOugSabWFq7bg==,
+        integrity: sha512-QWuwm9wcGMAuTsxP+qz6LBBd3Uq8I5Nv8xb0mk54jmNoCyDspnMvVsOxI6IsMmway5d1S9Su2+sCKv1st2l6eA==,
       }
     engines: { node: ^18.18.0 || >=20.0.0 }
 
@@ -2753,13 +2748,6 @@ packages:
       {
         integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==,
       }
-
-  aria-hidden@1.2.4:
-    resolution:
-      {
-        integrity: sha512-y+CcFFwelSXpLZk/7fMB2mUbGtX9lKycf1MWJ7CaTIERyitVlyQx6C+sxcROU2BAJ24OiZyK+8wj2i8AlBoS3A==,
-      }
-    engines: { node: ">=10" }
 
   aria-query@5.1.3:
     resolution:
@@ -4256,15 +4244,6 @@ packages:
       }
     engines: { node: ">=6.0" }
     hasBin: true
-
-  eslint-config-prettier@9.1.0:
-    resolution:
-      {
-        integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==,
-      }
-    hasBin: true
-    peerDependencies:
-      eslint: ">=7.0.0"
 
   eslint-config-react-app@7.0.1:
     resolution:
@@ -7548,14 +7527,6 @@ packages:
       }
     engines: { node: ">= 0.8.0" }
 
-  prettier@3.3.1:
-    resolution:
-      {
-        integrity: sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==,
-      }
-    engines: { node: ">=14" }
-    hasBin: true
-
   pretty-bytes@5.6.0:
     resolution:
       {
@@ -10583,7 +10554,7 @@ snapshots:
     dependencies:
       "@types/eslint": 8.56.10
       "@types/estree": 1.0.5
-      "@typescript-eslint/types": 7.12.0
+      "@typescript-eslint/types": 7.13.0
       comment-parser: 1.4.1
       esquery: 1.5.0
       jsdoc-type-pratt-parser: 4.0.0
@@ -10876,6 +10847,7 @@ snapshots:
       "@jridgewell/sourcemap-codec": 1.4.15
 
   "@leichtgewicht/ip-codec@2.0.5": {}
+
   "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
     dependencies:
       eslint-scope: 5.1.1
@@ -11373,7 +11345,7 @@ snapshots:
 
   "@typescript-eslint/types@5.62.0": {}
 
-  "@typescript-eslint/types@7.12.0": {}
+  "@typescript-eslint/types@7.13.0": {}
 
   "@typescript-eslint/typescript-estree@5.62.0(typescript@4.9.5)":
     dependencies:
@@ -11597,10 +11569,6 @@ snapshots:
       sprintf-js: 1.0.3
 
   argparse@2.0.1: {}
-
-  aria-hidden@1.2.4:
-    dependencies:
-      tslib: 2.6.3
 
   aria-query@5.1.3:
     dependencies:
@@ -12320,6 +12288,7 @@ snapshots:
       which-typed-array: 1.1.15
 
   deep-is@0.1.4: {}
+
   deepmerge@4.3.1: {}
 
   default-gateway@6.0.3:
@@ -12605,10 +12574,6 @@ snapshots:
       esutils: 2.0.3
     optionalDependencies:
       source-map: 0.6.1
-
-  eslint-config-prettier@9.1.0(eslint@8.57.0):
-    dependencies:
-      eslint: 8.57.0
 
   eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.24.7(@babel/core@7.24.7))(@babel/plugin-transform-react-jsx@7.24.7(@babel/core@7.24.7))(eslint@8.57.0)(jest@27.5.1)(typescript@4.9.5):
     dependencies:
@@ -14904,8 +14869,6 @@ snapshots:
   prelude-ls@1.1.2: {}
 
   prelude-ls@1.2.1: {}
-
-  prettier@3.3.1: {}
 
   pretty-bytes@5.6.0: {}
 

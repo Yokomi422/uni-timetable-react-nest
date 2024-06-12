@@ -1,29 +1,12 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "prettier",
-    "plugin:jsdoc/recommended-typescript-error"
-  ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react", "jsdoc"],
+  "plugins": ["jsdoc"],
+  "extends": ["plugin:jsdoc/recommended-typescript-error"],
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "jsdoc/require-jsdoc": ["error", { "publicOnly": true }]
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+    "jsdoc/require-jsdoc": [
+      "error",
+      {
+        "publicOnly": true
+      }
+    ]
   }
 }
