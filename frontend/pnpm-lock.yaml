@@ -1716,7 +1716,6 @@ packages:
       webpack-plugin-serve:
         optional: true
 
-
   "@react-aria/focus@3.17.1":
     resolution:
       {
@@ -11598,7 +11597,6 @@ snapshots:
       sprintf-js: 1.0.3
 
   argparse@2.0.1: {}
-
 
   aria-hidden@1.2.4:
     dependencies:
