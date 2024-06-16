@@ -1,16 +1,15 @@
-import { useState } from "react";
+import { useReducer } from "react";
 
 import YearInput from "./YearInput";
 import FacultyInput from "./FacaltyInput";
 import DepartmentInput from "./DepartmentInput";
+import { reducer, initialState } from "./data";
 
 /**
  * @returns Profile form component
  */
 export default function ProfileForm() {
-  const [selectedYear, setSelectedYear] = useState("1");
-  const [selectedFaculty, setSelectedFaculty] = useState("default");
-  const [selectedDepartment, setSelectedDepartment] = useState("default");
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-3xl mx-auto px-4 py-8 bg-white rounded-lg shadow-md">
@@ -19,23 +18,13 @@ export default function ProfileForm() {
         </h1>
         <form>
           {/* Year input */}
-          <YearInput
-            selectedYear={selectedYear}
-            setSelectedYear={setSelectedYear}
-          />
+          <YearInput state={state} dispatch={dispatch} />
 
           {/* Faculty input */}
-          <FacultyInput
-            selectedFaculty={selectedFaculty}
-            setSelectedFaculty={setSelectedFaculty}
-          />
+          <FacultyInput state={state} dispatch={dispatch} />
 
           {/* Department input */}
-          <DepartmentInput
-            selectedDepartment={selectedDepartment}
-            selectedFaculty={selectedFaculty}
-            setSelectedDepartment={setSelectedDepartment}
-          />
+          <DepartmentInput state={state} dispatch={dispatch} />
 
           {/* Interests textarea */}
           <div className="relative mb-6" data-twe-input-wrapper-init>
