@@ -13,6 +13,9 @@ importers:
       "@headlessui/react":
         specifier: ^2.0.4
         version: 2.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      "@hookform/resolvers":
+        specifier: ^3.6.0
+        version: 3.6.0(react-hook-form@7.52.0(react@18.3.1))
       "@testing-library/jest-dom":
         specifier: ^5.17.0
         version: 5.17.0
@@ -43,6 +46,9 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-hook-form:
+        specifier: ^7.52.0
+        version: 7.52.0(react@18.3.1)
       react-icons:
         specifier: ^5.2.1
         version: 5.2.1(react@18.3.1)
@@ -58,6 +64,9 @@ importers:
       web-vitals:
         specifier: ^2.1.4
         version: 2.1.4
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       autoprefixer:
         specifier: ^10.4.19
@@ -1444,6 +1453,14 @@ packages:
     peerDependencies:
       react: ^18
       react-dom: ^18
+
+  "@hookform/resolvers@3.6.0":
+    resolution:
+      {
+        integrity: sha512-UBcpyOX3+RR+dNnqBd0lchXpoL8p4xC21XP8H6Meb8uve5Br1GCnmg0PcBoKKqPKgGu9GHQ/oygcmPrQhetwqw==,
+      }
+    peerDependencies:
+      react-hook-form: ^7.0.0
 
   "@humanwhocodes/config-array@0.11.14":
     resolution:
@@ -7685,6 +7702,15 @@ packages:
         integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==,
       }
 
+  react-hook-form@7.52.0:
+    resolution:
+      {
+        integrity: sha512-mJX506Xc6mirzLsmXUJyqlAI3Kj9Ph2RhplYhUVffeOQSnubK2uVqBFOBJmvKikvbFV91pxVXmDiR+QMF19x6A==,
+      }
+    engines: { node: ">=12.22.0" }
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
+
   react-icons@5.2.1:
     resolution:
       {
@@ -9509,6 +9535,12 @@ packages:
       }
     engines: { node: ">=10" }
 
+  zod@3.23.8:
+    resolution:
+      {
+        integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==,
+      }
+
 snapshots:
   "@adobe/css-tools@4.4.0": {}
 
@@ -10615,6 +10647,10 @@ snapshots:
       "@tanstack/react-virtual": 3.5.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+
+  "@hookform/resolvers@3.6.0(react-hook-form@7.52.0(react@18.3.1))":
+    dependencies:
+      react-hook-form: 7.52.0(react@18.3.1)
 
   "@humanwhocodes/config-array@0.11.14":
     dependencies:
@@ -14994,6 +15030,10 @@ snapshots:
 
   react-error-overlay@6.0.11: {}
 
+  react-hook-form@7.52.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   react-icons@5.2.1(react@18.3.1):
     dependencies:
       react: 18.3.1
@@ -16307,3 +16347,5 @@ snapshots:
       yargs-parser: 20.2.9
 
   yocto-queue@0.1.0: {}
+
+  zod@3.23.8: {}
