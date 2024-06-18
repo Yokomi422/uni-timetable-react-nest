@@ -1,0 +1,13 @@
+services:
+  db:
+    container_name: db
+    build: ./docker/db
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./docker/db/init:/docker-entrypoint-initdb.d
+      - ./docker/db/db-store:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
