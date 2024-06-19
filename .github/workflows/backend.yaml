@@ -1,4 +1,4 @@
-name: frontend
+name: backend
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./frontend
+        working-directory: ./backend
     strategy:
       matrix:
         node-version: [19.x, 20.x]
@@ -30,4 +30,4 @@ jobs:
       - name: lint
         run: pnpm lint
       - name: format
-        run: pnpm fmt
+        run: pnpm format
